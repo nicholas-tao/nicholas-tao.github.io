@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Header } from "./components/Header";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
       <Header />
       <About />
       <Projects />
+      <Footer />
     </Container>
   );
 };

@@ -25,22 +25,42 @@ export const Project = (props: IProps) => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
-  border-radius: 5%;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+  padding: 1px;
+  border: 1px solid #3b403e;
+  border-radius: 3%;
   margin-top: 20px;
 `;
 
 const Image = styled.img`
-  width: 400px;
-  border-radius: 5% 0 0 5%;
-
-  padding: 0.5px;
+  border-radius: 3% 0 0 3%;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    border-radius: 5%;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 200px;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 400px;
+  }
 `;
 
 const About = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350px;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 200px;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 350px;
+  }
   padding: 10px;
 `;
 

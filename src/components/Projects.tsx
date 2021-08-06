@@ -6,7 +6,7 @@ import { IProject } from "../data/projects";
 export const Projects = () => {
   return (
     <Wrapper>
-      <h2>Some projects I've worked on</h2>
+      <h2 style={{ textAlign: "center" }}>Some projects I've worked on</h2>
       {projects.map((project: IProject, i: number) => {
         return <Project data={project} key={i} />;
       })}
