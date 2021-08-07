@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import me from "../assets/me.jpg";
+import { Hobbies } from "./Hobbies";
 
 export const About = () => {
   return (
@@ -25,17 +26,13 @@ export const About = () => {
         looking to tackle interesting challenges.
         <br />
         <br />
-        Outside of school, you can find me biking 🚲, playing badminton 🏸, or
-        hitting the gym 🏋️. I also make{" "}
-        <Link href="https://www.youtube.com/c/NicholasT/">
-          YouTube videos
-        </Link>{" "}
-        about software engineering/tech and my journey as a CS student trying to
-        figure out life.
+        <Hobbies />I started my channel in May 2020 to document my university
+        experience and now make videos about software engineering/tech and my
+        journey as a CS student trying to figure out life.
         <br />
         <br />
-        Got an exciting opportunity or want to learn more about me? Let's chat.
-        ☕
+        Got an exciting opportunity or want to learn more about me?{" "}
+        <Link href="https://www.linkedin.com/in/nicholastao">Let's chat.</Link>
       </Body>
     </Wrapper>
   );
@@ -54,6 +51,10 @@ const Me = styled.img`
 
 const Greeting = styled.h1`
   text-align: center;
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
 `;
 
 const waveAnimation = keyframes`
@@ -74,7 +75,7 @@ const Wave = styled.span`
   display: inline-block;
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -84,6 +85,6 @@ const Link = styled.a`
 `;
 
 const Body = styled.p`
-  font-size: 18px;
-  max-width: 1000px;
+  font-size: 20px;
+  max-width: 1100px;
 `;

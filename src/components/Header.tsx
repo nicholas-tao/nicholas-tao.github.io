@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <Wrapper>
       <a href="/">
-        <Initials src={initials} alt="NT" height="45px" />
+        <Initials src={initials} alt="NT" />
       </a>
       <Icons>
         <a href="https://www.github.com/nicholas-tao">
@@ -41,6 +41,10 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 const Initials = styled.img`
+  height: 45px;
+  @media only screen and (max-width: 600px) {
+    height: 30px;
+  }
   transition: transform 250ms;
   :hover {
     transform: translateY(-6px);

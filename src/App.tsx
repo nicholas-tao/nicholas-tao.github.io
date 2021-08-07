@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
+import "./fonts/fonts.css";
 
 export const App = () => {
   return (
@@ -22,4 +23,8 @@ const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 48px;
+  font-family: "Mada", sans-serif;
+  @media only screen and (max-width: 600px) {
+    padding: 32px;
+  }
 `;

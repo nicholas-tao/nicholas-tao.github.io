@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Footer = () => {
   return (
     <Wrapper>
-      <p>Made with ❤️ by Nicholas Tao, 2021</p>
+      <p>Made with ❤️ by Nicholas Tao &copy; 2021 </p>
     </Wrapper>
   );
 };

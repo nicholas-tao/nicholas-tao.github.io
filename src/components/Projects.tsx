@@ -6,11 +6,10 @@ import { IProject } from "../data/projects";
 export const Projects = () => {
   return (
     <Wrapper>
-      <h2 style={{ textAlign: "center" }}>Some projects I've worked on</h2>
+      <Title>👨‍💻Some of my projects</Title>
       {projects.map((project: IProject, i: number) => {
-        return <Project data={project} key={i} />;
+        return <Project project={project} key={i} />;
       })}
-      {/*make a Project component, and a projects data file (array of objects), then we map through the array to display all the projects*/}
     </Wrapper>
   );
 };
@@ -19,4 +18,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+`;
+
+const Title = styled.h3`
+  text-align: center;
+  font-family: "Mada", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  @media only screen and (max-width: 600px) {
+    font-size: 28px;
+  }
 `;

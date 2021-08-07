@@ -2,26 +2,35 @@ import styled from "styled-components";
 import { IProject } from "../data/projects";
 
 interface IProps {
-  data: IProject;
+  project: IProject;
 }
 
 export const Project = (props: IProps) => {
-  const { data } = props;
+  const { project } = props;
   return (
-    <Wrapper>
-      <Image src={data.image} />
-      <About>
-        <Name>{data.name}</Name>
-        <Pills>
-          {data.tools.map((tool, i) => {
-            return <Pill key={i}>{tool}</Pill>;
-          })}
-        </Pills>
-        <Description>{data.description}</Description>
-      </About>
-    </Wrapper>
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noreferrer"
+      style={{ textDecoration: "none", color: "black" }}
+    >
+      <Wrapper>
+        <Image src={project.image} />
+        <About>
+          {project.award ? <Award>{project.award}</Award> : null}
+          <Name>{project.name}</Name>
+          <Pills>
+            {project.tools.map((tool, i) => {
+              return <Pill key={i}>{tool}</Pill>;
+            })}
+          </Pills>
+          <Description>{project.description}</Description>
+        </About>
+      </Wrapper>
+    </a>
   );
 };
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -41,7 +50,8 @@ const Image = styled.img`
     border-radius: 5%;
   }
   @media only screen and (min-width: 600px) {
-    width: 200px;
+    width: 300px;
+    height: (300 / 1.8) px;
   }
   @media only screen and (min-width: 1024px) {
     width: 400px;
@@ -52,23 +62,20 @@ const About = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
   @media only screen and (min-width: 600px) {
-    width: 200px;
+    width: 250px;
   }
   @media only screen and (min-width: 1024px) {
     width: 350px;
   }
-  padding: 10px;
+  padding: 15px 15px 15px 25px;
 `;
 
 const Pill = styled.p`
-  background-color: #83c9af;
+  background-color: #cae8dd;
   margin: 0px 5px 0px 0px;
-  padding: 3px;
-  border-radius: 10%;
+  padding: 1px 5px;
+  border-radius: 15%;
 `;
 
 const Pills = styled.div`
@@ -79,8 +86,17 @@ const Pills = styled.div`
   margin-top: 0;
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  font-size: 18px;
+`;
 
 const Name = styled.h2`
   margin: 0px 0px 5px 0px;
+`;
+
+const Award = styled.h4`
+  text-transform: uppercase;
+  margin: 0;
+  color: #a6a6a6;
+  font-weight: 600;
 `;
