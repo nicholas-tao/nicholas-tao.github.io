@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "./About";
 
 export const Hobbies = () => {
   return (
@@ -9,12 +8,7 @@ export const Hobbies = () => {
         <li>🚲Going on bike rides</li>
         <li>🏸Playing badminton</li>
         <li>🥏Tossing a disc around</li>
-        <li>
-          ▶️Making{" "}
-          <Link href="https://www.youtube.com/c/NicholasT/">
-            YouTube videos
-          </Link>
-        </li>
+        <li>▶️Making YouTube videos</li>
       </ul>
     </>
   );

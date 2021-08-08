@@ -28,10 +28,11 @@ export const About = () => {
         looking to tackle interesting challenges.
         <br />
         <br />
-        <Hobbies />
-        I started my channel in May 2020 to document my university experience
-        and now make videos about software engineering/tech and my journey as a
-        CS student trying to figure out life.
+        <Hobbies />I started{" "}
+        <Link href="https://www.youtube.com/c/NicholasT/">my channel </Link> in
+        May 2020 to document my university experience and now make videos about
+        software engineering/tech and my journey as a CS student trying to
+        figure out life.
         <br />
         <br />
         Got an exciting opportunity or want to learn more about me?{" "}
