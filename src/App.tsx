@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { Header } from "./components/Header";
 import { About } from "./components/About";
@@ -20,11 +21,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 48px;
+  padding: 48px 48px 16px;
   font-family: "Mada", sans-serif;
+
   @media only screen and (max-width: 600px) {
-    padding: 32px;
+    padding: 32px 32px 8px;
   }
 `;

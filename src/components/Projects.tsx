@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { Project } from "./Project";
 import { projects } from "../data/projects";
@@ -25,6 +26,7 @@ const Title = styled.h3`
   font-family: "Mada", sans-serif;
   font-size: 32px;
   margin: 0;
+
   @media only screen and (max-width: 600px) {
     font-size: 28px;
   }

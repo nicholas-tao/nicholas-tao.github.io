@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { IProject } from "../data/projects";
 
@@ -45,9 +46,10 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   border-radius: 3% 0 0 3%;
+
   @media only screen and (max-width: 600px) {
     width: 100%;
-    border-radius: 5%;
+    border-radius: 5% 5% 0 0;
   }
   @media only screen and (min-width: 600px) {
     width: 300px;

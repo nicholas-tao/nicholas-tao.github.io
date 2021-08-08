@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const Footer = () => {
@@ -13,4 +14,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 40px;
+  }
 `;

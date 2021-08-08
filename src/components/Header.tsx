@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import initials from "../assets/initials.png";
+import initials from "../assets/img/initials.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
@@ -41,7 +42,8 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 const Initials = styled.img`
-  height: 45px;
+  height: 40px;
+
   @media only screen and (max-width: 600px) {
     height: 30px;
   }

@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "./About";
 
 export const Hobbies = () => {
@@ -8,7 +9,6 @@ export const Hobbies = () => {
         <li>🚲Going on bike rides</li>
         <li>🏸Playing badminton</li>
         <li>🥏Tossing a disc around</li>
-        {/*<li>💪Hitting the gym </li>*/}
         <li>
           ▶️Making{" "}
           <Link href="https://www.youtube.com/c/NicholasT/">

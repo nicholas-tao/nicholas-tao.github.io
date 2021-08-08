@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import me from "../assets/me.jpg";
+import me from "../assets/img/me.jpg";
 import { Hobbies } from "./Hobbies";
 
 export const About = () => {
@@ -26,9 +28,10 @@ export const About = () => {
         looking to tackle interesting challenges.
         <br />
         <br />
-        <Hobbies />I started my channel in May 2020 to document my university
-        experience and now make videos about software engineering/tech and my
-        journey as a CS student trying to figure out life.
+        <Hobbies />
+        I started my channel in May 2020 to document my university experience
+        and now make videos about software engineering/tech and my journey as a
+        CS student trying to figure out life.
         <br />
         <br />
         Got an exciting opportunity or want to learn more about me?{" "}
@@ -59,17 +62,17 @@ const Greeting = styled.h1`
 
 const waveAnimation = keyframes`
     0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   10% { transform: rotate(14.0deg) } 
    20% { transform: rotate(-8.0deg) }
    30% { transform: rotate(14.0deg) }
    40% { transform: rotate(-4.0deg) }
    50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+   60% { transform: rotate( 0.0deg) } 
   100% { transform: rotate( 0.0deg) }
 `;
 
 const Wave = styled.span`
-  animation: ${waveAnimation} 2.5s; /* Refers to the name of your @keyframes element below */
+  animation: ${waveAnimation} 2.5s;
   animation-iteration-count: 2;
   transform-origin: 70% 70%;
   display: inline-block;
