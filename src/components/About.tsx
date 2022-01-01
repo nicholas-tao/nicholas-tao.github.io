@@ -12,11 +12,12 @@ export const About = () => {
         <Wave>👋</Wave> Nice to meet you, I'm Nicholas
       </Greeting>
       <Body>
-        I'm a 2nd year Computer Science student at the University of Waterloo.
+        I'm a 2nd year Computer Science student at the University of Waterloo and currently interning as a Software Engineer
+        at <Link href="https://www.wealthsimple.com/" bgColour="#cae8dd">Wealthsimple</Link>.
         <br />
         <br />
-        I'm currently building the future of wholesale as a Frontend Engineer
-        Intern at Faire and seeking Winter 2022 internships.
+        I was previously a Frontend Engineer Intern on the the Retailer Growth team at <Link href="https://www.faire.com/" bgColour="#cae8dd">Faire</Link>. 
+        I'm currently seeking <b>Fall 2022</b> internships!
         <br />
         <br />
         From connecting university students through{" "}
@@ -29,8 +30,8 @@ export const About = () => {
         <br />
         <br />
         <Hobbies />I started{" "}
-        <Link href="https://www.youtube.com/c/NicholasT/">my channel </Link> in
-        May 2020 to document my university experience and now make videos about
+        <Link href="https://www.youtube.com/c/NicholasT/" bgColour="#cae8dd">my channel </Link> in
+        May 2020 to document my university experience, but now make videos about
         software engineering/tech and my journey as a CS student trying to
         figure out life.
         <br />
@@ -74,18 +75,19 @@ const waveAnimation = keyframes`
 
 const Wave = styled.span`
   animation: ${waveAnimation} 2.5s;
-  animation-iteration-count: 2;
+  animation-iteration-count: 3;
   transform-origin: 70% 70%;
   display: inline-block;
 `;
 
-export const Link = styled.a`
+export const Link = styled.a<{bgColour?: string}>`
   font-weight: bold;
   text-decoration: none;
   color: black;
   :hover {
     color: #3aa17b;
-  }
+  };
+  background-color: ${props => props.bgColour};
 `;
 
 const Body = styled.p`

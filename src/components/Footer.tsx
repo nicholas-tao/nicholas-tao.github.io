@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const Footer = () => {
   return (
     <Wrapper>
-      <p>Made with ❤️ by Nicholas Tao &copy; 2021 </p>
+      <p>Made with ❤️ by Nicholas Tao &copy; 2022 </p>
+      <LastUpdated>Last updated: Jan 2022</LastUpdated>
     </Wrapper>
   );
 };
@@ -19,3 +20,8 @@ const Wrapper = styled.div`
     margin-top: 40px;
   }
 `;
+
+const LastUpdated = styled.p`
+  font-size: 0.8rem;
+  margin-top: 0;
+`

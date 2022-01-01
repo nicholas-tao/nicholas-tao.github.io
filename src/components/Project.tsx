@@ -42,6 +42,10 @@ const Wrapper = styled.div`
   border: 1px solid #3b403e;
   border-radius: 3%;
   margin-top: 20px;
+  transition: transform 250ms;
+  :hover {
+    transform: translateY(-4px);
+  }
 `;
 
 const Image = styled.img`

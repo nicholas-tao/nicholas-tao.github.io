@@ -7,7 +7,7 @@ import { IProject } from "../data/projects";
 export const Projects = () => {
   return (
     <Wrapper>
-      <Title>👨‍💻Some of my projects</Title>
+      <Title>👨‍💻Things I&apos;ve built</Title>
       {projects.map((project: IProject, i: number) => {
         return <Project project={project} key={i} />;
       })}
