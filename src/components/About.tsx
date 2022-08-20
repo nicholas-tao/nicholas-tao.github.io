@@ -12,12 +12,12 @@ export const About = () => {
         <Wave>👋</Wave> Nice to meet you, I'm Nicholas
       </Greeting>
       <Body>
-        I'm a 2nd year Computer Science student at the University of Waterloo and currently interning as a Software Engineer
-        at <Link href="https://www.wealthsimple.com/" bgColour="#cae8dd">Wealthsimple</Link>.
+        I'm a 3rd year Computer Science student at the University of Waterloo and currently interning as a Software Engineer
+        at <Link href="https://www.kiavi.com/" bgColour="#cae8dd">Kiavi</Link>.
         <br />
         <br />
-        I was previously a Frontend Engineer Intern on the the Retailer Growth team at <Link href="https://www.faire.com/" bgColour="#cae8dd">Faire</Link>. 
-        I'm currently seeking <b>Fall 2022</b> internships!
+        I was previously a Software Engineer Intern on the Frontend Platform team at <Link href="https://www.wealthsimple.com/" bgColour="#cae8dd">Wealthsimple</Link> and a Frontend Engineer Intern on the the Retailer Growth team at <Link href="https://www.faire.com/" bgColour="#cae8dd">Faire</Link>. 
+        I'm currently seeking <b>Summer 2023</b> internships!
         <br />
         <br />
         From connecting university students through{" "}
@@ -30,7 +30,7 @@ export const About = () => {
         <br />
         <br />
         <Hobbies />I started{" "}
-        <Link href="https://www.youtube.com/c/NicholasT/" bgColour="#cae8dd">my channel </Link> in
+        <Link href="https://www.youtube.com/c/NicholasT/" bgColour="#cae8dd">my channel</Link> in
         May 2020 to document my university experience, but now make videos about
         software engineering/tech and my journey as a CS student trying to
         figure out life.
