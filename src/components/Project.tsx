@@ -1,6 +1,6 @@
+import { IProject } from "../types";
 import React from "react";
 import styled from "styled-components";
-import { IProject } from "../data/projects";
 
 interface IProps {
   project: IProject;

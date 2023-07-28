@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import { IProject } from "../types";
 import { Project } from "./Project";
+import React from "react";
 import { projects } from "../data/projects";
-import { IProject } from "../data/projects";
+import styled from "styled-components";
 
 export const Projects = () => {
   return (
     <Wrapper>
+      <Back href="/">home</Back>
       <Title>👨‍💻Things I&apos;ve built</Title>
       {projects.map((project: IProject, i: number) => {
         return <Project project={project} key={i} />;
@@ -30,4 +31,10 @@ const Title = styled.h3`
   @media only screen and (max-width: 600px) {
     font-size: 28px;
   }
+`;
+
+const Back = styled.a`
+  color: black;
+  font-size: 18px;
+  margin-bottom: 16px;
 `;

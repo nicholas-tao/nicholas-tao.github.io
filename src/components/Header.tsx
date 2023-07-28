@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import initials from "../assets/img/initials.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import initials from "../assets/img/initials.png";
+import styled from "styled-components";
 
 export const Header = () => {
   return (

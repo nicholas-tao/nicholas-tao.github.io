@@ -1,3 +1,5 @@
+import { IProject } from "../types";
+
 export const projects: IProject[] = [
   {
     name: "Wave Chat",
@@ -26,12 +28,3 @@ export const projects: IProject[] = [
     link: "https://devpost.com/software/lynz",
   },
 ];
-
-export interface IProject {
-  name: string;
-  tools: string[];
-  image: string;
-  description: string;
-  link: string;
-  award?: string;
-}

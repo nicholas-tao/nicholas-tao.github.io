@@ -1,17 +1,23 @@
+import "./fonts/fonts.css";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+import { Projects } from "./components/Projects";
 import React from "react";
 import styled from "styled-components";
-import { Header } from "./components/Header";
-import { About } from "./components/About";
-import { Projects } from "./components/Projects";
-import { Footer } from "./components/Footer";
-import "./fonts/fonts.css";
 
 export const App = () => {
   return (
     <Container>
-      <Header />
-      <About />
-      <Projects />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </Container>
   );
@@ -21,7 +27,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 48px 48px 16px;
   font-family: "Mada", sans-serif;
