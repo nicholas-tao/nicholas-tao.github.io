@@ -22,11 +22,12 @@ export const Home = () => {
         <Wave>👋</Wave> Nice to meet you, I'm Nicholas
       </Greeting>
       <Body>
-        I'm a 3rd year Computer Science student at the University of Waterloo
-        and currently building 1:1 tutoring features at{" "}
-        <Link href="https://www.outschool.com/">Outschool</Link>.
+        I'm a 3rd year Computer Science student at the University of Waterloo.
+        This January, I'll be joining{" "}
+        <Link href="https://www.ethglobal.com/">ETHGlobal</Link> in building the
+        most valuable community in web3.
         <List description="Previously, I" items={internships} />
-        I'm currently seeking <b>2024</b> internships!
+        I'm currently seeking <b>Summer 2024</b> opportunities!
         <PastProjects />
         <List description="In my free time, you can find me" items={hobbies} />
         <Youtube />

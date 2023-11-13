@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <Wrapper>
       <p>Made with ❤️ by Nicholas Tao &copy; 2023 </p>
-      <LastUpdated>Last updated: July 2023</LastUpdated>
+      <LastUpdated>Last updated: November 2023</LastUpdated>
     </Wrapper>
   );
 };
@@ -24,4 +24,4 @@ const Wrapper = styled.div`
 const LastUpdated = styled.p`
   font-size: 0.8rem;
   margin-top: 0;
-`
+`;
