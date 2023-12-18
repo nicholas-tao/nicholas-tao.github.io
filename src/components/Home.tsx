@@ -17,12 +17,17 @@ import { internships } from "../data/internships";
 export const Home = () => {
   return (
     <Wrapper>
-      <Headshot src={headshot} alt="NT" height="225px" width="225px" />
-      <Greeting>
-        <Wave>👋</Wave> Nice to meet you, I'm Nicholas
-      </Greeting>
+      <Header>
+        <Greeting>
+          <h1>
+            <Wave>👋</Wave>Nice to meet you, I'm Nicholas
+          </h1>
+          <IconLinks />
+        </Greeting>
+        <Headshot src={headshot} alt="NT" height="225px" width="225px" />
+      </Header>
       <Body>
-        I'm a 3rd year Computer Science student at the University of Waterloo.
+        I'm a 4th year Computer Science student at the University of Waterloo.
         This January, I'll be joining{" "}
         <Link href="https://www.ethglobal.com/">ETHGlobal</Link> in building the
         most valuable community in web3.
@@ -33,7 +38,6 @@ export const Home = () => {
         <Youtube />
         Always happy to meet new people and hear about exciting opportunities!{" "}
         <Link href="https://www.linkedin.com/in/nicholastao">Let's chat.</Link>
-        <IconLinks />
       </Body>
     </Wrapper>
   );
@@ -73,19 +77,17 @@ const Youtube = () => {
 
 const IconLinks = () => {
   return (
-    <SectionWrapper>
-      <Icons>
-        <a href="https://www.github.com/nicholas-tao">
-          <Icon icon={faGithub} color="grey" />
-        </a>
-        <a href="https://www.linkedin.com/in/nicholastao">
-          <Icon icon={faLinkedinIn} color="grey" />
-        </a>
-        <a href="https://www.youtube.com/@nicholast">
-          <Icon icon={faYoutube} color="grey" />
-        </a>
-      </Icons>
-    </SectionWrapper>
+    <Icons>
+      <a href="https://www.github.com/nicholas-tao">
+        <Icon icon={faGithub} color="grey" />
+      </a>
+      <a href="https://www.linkedin.com/in/nicholastao">
+        <Icon icon={faLinkedinIn} color="grey" />
+      </a>
+      <a href="https://www.youtube.com/@nicholast">
+        <Icon icon={faYoutube} color="grey" />
+      </a>
+    </Icons>
   );
 };
 
@@ -93,18 +95,18 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 `;
 
 const Headshot = styled.img`
   border-radius: 50%;
 `;
 
-const Greeting = styled.h1`
+const Greeting = styled.div`
   text-align: center;
+  margin-bottom: 0;
   @media only screen and (max-width: 600px) {
     font-size: 30px;
-    margin-bottom: 0;
   }
 `;
 
@@ -144,7 +146,7 @@ const Body = styled.p`
 const Icons = styled.div`
   display: flex;
   column-gap: 20px;
-  margin-top: 50px;
+  margin-top: 24px;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -155,4 +157,16 @@ const Icon = styled(FontAwesomeIcon)`
 
 const SectionWrapper = styled.div`
   margin: 16px 0px;
+`;
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
 `;

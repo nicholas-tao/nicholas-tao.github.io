@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <Wrapper>
       <p>Made with ❤️ by Nicholas Tao &copy; 2023 </p>
-      <LastUpdated>Last updated: November 2023</LastUpdated>
+      <LastUpdated>Last updated: December 2023</LastUpdated>
     </Wrapper>
   );
 };
