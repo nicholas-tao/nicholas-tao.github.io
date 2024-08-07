@@ -19,7 +19,8 @@ export const List = (props: IProps) => {
           return (
             <li key={item.description}>
               {item.emoji}
-              {item.description} <Link href={item.link}>{item.company}</Link>
+              {item.description}{" "}
+              <Link href={item.link ?? ""}>{item.company}</Link>
             </li>
           );
         })}

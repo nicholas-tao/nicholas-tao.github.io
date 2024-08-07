@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import {
+  IconDefinition,
   faGithub,
   faLinkedinIn,
   faYoutube,
@@ -10,7 +11,7 @@ import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { List } from "./List";
 import React from "react";
-import headshot from "../assets/img/headshot.jpg";
+import headshot from "../assets/img/headshot_2024.png";
 import { hobbies } from "../data/hobbies";
 import { internships } from "../data/internships";
 
@@ -27,12 +28,12 @@ export const Home = () => {
         <Headshot src={headshot} alt="NT" height="225px" width="225px" />
       </Header>
       <Body>
-        I'm a 4th year Computer Science student at the University of Waterloo.
-        This January, I'll be joining{" "}
-        <Link href="https://www.ethglobal.com/">ETHGlobal</Link> in building the
-        most valuable community in web3.
+        I'm a final year Computer Science student at the University of Waterloo.
+        This summer, I interned on the Console team at{" "}
+        <Link href="https://www.cockroachlabs.com/">Cockroach Labs</Link> (the
+        creators of CockroachDB) in New York City!
         <List description="Previously, I" items={internships} />
-        I'm currently seeking <b>Summer 2024</b> opportunities!
+        I'm currently seeking <b>2025 new grad</b> opportunities!
         <PastProjects />
         <List description="In my free time, you can find me" items={hobbies} />
         <Youtube />
@@ -75,18 +76,23 @@ const Youtube = () => {
   );
 };
 
+const IconLink = ({ icon, href }: { icon: IconDefinition; href: string }) => {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      <Icon icon={icon} color="grey" />
+    </a>
+  );
+};
+
 const IconLinks = () => {
   return (
     <Icons>
-      <a href="https://www.github.com/nicholas-tao">
-        <Icon icon={faGithub} color="grey" />
-      </a>
-      <a href="https://www.linkedin.com/in/nicholastao">
-        <Icon icon={faLinkedinIn} color="grey" />
-      </a>
-      <a href="https://www.youtube.com/@nicholast">
-        <Icon icon={faYoutube} color="grey" />
-      </a>
+      <IconLink icon={faGithub} href="https://www.github.com/nicholas-tao" />
+      <IconLink
+        icon={faLinkedinIn}
+        href="https://www.linkedin.com/in/nicholastao"
+      />
+      <IconLink icon={faYoutube} href="https://www.youtube.com/@nicholast" />
     </Icons>
   );
 };
@@ -128,7 +134,28 @@ const Wave = styled.span`
   display: inline-block;
 `;
 
-export const Link = styled.a<{ bgColour?: string }>`
+export const Link = ({
+  href,
+  children,
+  bgColour,
+}: {
+  href: string;
+  children: React.ReactNode;
+  bgColour?: string;
+}) => {
+  return (
+    <StyledATag
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      bgColour={bgColour}
+    >
+      {children}
+    </StyledATag>
+  );
+};
+
+const StyledATag = styled.a<{ bgColour?: string }>`
   font-weight: bold;
   text-decoration: none;
   color: black;

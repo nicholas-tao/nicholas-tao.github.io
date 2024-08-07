@@ -2,6 +2,11 @@ import { IItem } from "../types";
 
 export const internships: IItem[] = [
   {
+    description: "handled crypto payments at",
+    company: "ETHGlobal",
+    link: "https://www.ethglobal.com/",
+  },
+  {
     description: "built 1-on-1 tutoring features at",
     company: "Outschool",
     link: "https://www.outschool.com/",
