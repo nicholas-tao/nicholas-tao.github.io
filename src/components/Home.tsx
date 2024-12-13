@@ -11,7 +11,7 @@ import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { List } from "./List";
 import React from "react";
-import headshot from "../assets/img/headshot_2024.png";
+import headshot from "../assets/img/nick.jpg";
 import { hobbies } from "../data/hobbies";
 import { internships } from "../data/internships";
 
