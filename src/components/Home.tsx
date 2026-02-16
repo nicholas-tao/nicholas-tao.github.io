@@ -14,7 +14,7 @@ import { internships } from "../data/internships";
 export const Home = () => (
   <Wrapper>
     <HeroSection>
-      <Headshot src={headshot} alt="NT" />
+      <Headshot src={headshot} alt="Nicholas Tao" />
       <NameRow>
         <Wave>👋</Wave>
         <Name>Hey, I'm Nicholas</Name>
@@ -47,7 +47,7 @@ export const Home = () => (
         which automates job applications, to{" "}
         <Link href="https://devpost.com/software/lynz">Lynz</Link>, which
         tracked grocery store crowds during the pandemic. You can see more of
-        my <Link href="/projects">projects</Link>.
+        my <Link href="/projects">projects here</Link>.
       </Paragraph>
 
       <Paragraph>
@@ -154,3 +154,4 @@ const Highlight = styled.span`
   color: ${colors.text};
   font-weight: 500;
 `;
+

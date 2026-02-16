@@ -11,7 +11,7 @@ export const Project = ({ project }: ProjectProps) => (
   <CardLink href={project.link} target="_blank" rel="noreferrer">
     <Card>
       <ImageWrapper>
-        <Image src={project.image} alt={project.name} />
+        <Image src={project.image} alt={project.name} loading="lazy" />
       </ImageWrapper>
       <Content>
         {project.award && <Award>{project.award}</Award>}

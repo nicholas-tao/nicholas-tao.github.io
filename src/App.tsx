@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
+import { NotFound } from "./components/NotFound";
 import { Projects } from "./components/Projects";
+import { ScrollToTop } from "./components/ScrollToTop";
 import React from "react";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { colors, fonts } from "./theme";
@@ -41,9 +43,11 @@ export const App = () => (
     <GlobalStyle />
     <Container>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <Footer />
