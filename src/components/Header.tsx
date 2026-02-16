@@ -1,55 +1,37 @@
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import initials from "../assets/img/initials.png";
 import styled from "styled-components";
+import { SocialIcons } from "./SocialIcons";
+import { colors, fonts } from "../theme";
 
-export const Header = () => {
-  return (
-    <Wrapper>
-      <a href="/">
-        <Initials src={initials} alt="NT" />
-      </a>
-      <Icons>
-        <a href="https://www.github.com/nicholas-tao">
-          <Icon icon={faGithub} size="lg" color="black" />
-        </a>
-        <a href="https://www.linkedin.com/in/nicholastao">
-          <Icon icon={faLinkedinIn} size="lg" color="black" />
-        </a>
-      </Icons>
-    </Wrapper>
-  );
-};
+export const Header = () => (
+  <Nav>
+    <LogoLink href="/">NT</LogoLink>
+    <SocialIcons />
+  </Nav>
+);
 
-const Wrapper = styled.div`
+// -- Styled Components --
+
+const Nav = styled.nav`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  margin-bottom: 48px;
 `;
 
-const Icons = styled.div`
-  display: flex;
-  column-gap: 20px;
-  justify-content: space-between;
-`;
+const LogoLink = styled.a`
+  font-family: ${fonts.heading};
+  font-size: 24px;
+  font-weight: 600;
+  color: ${colors.text};
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: opacity 0.2s ease;
 
-const Icon = styled(FontAwesomeIcon)`
-  :hover {
-    color: #808080;
-  }
-`;
-
-const Initials = styled.img`
-  height: 40px;
-
-  @media only screen and (max-width: 600px) {
-    height: 30px;
-  }
-  transition: transform 250ms;
-  :hover {
-    transform: translateY(-6px);
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
   }
 `;

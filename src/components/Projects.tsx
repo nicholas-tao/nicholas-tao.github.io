@@ -1,52 +1,57 @@
 import { IProject } from "../types";
+import { Header } from "./Header";
 import { Project } from "./Project";
 import React from "react";
 import { projects } from "../data/projects";
 import styled from "styled-components";
+import { colors, fonts } from "../theme";
 
-export const Projects = () => {
-  return (
-    <Wrapper>
-      <Back href="/">home</Back>
-      <Title>👨‍💻Things I&apos;ve built</Title>
-      <Subheading>
-        All of these started because I ran into a problem that annoyed me enough to
-        build something to fix it.
-      </Subheading>
-      {projects.map((project: IProject, i: number) => {
-        return <Project project={project} key={i} />;
-      })}
-    </Wrapper>
-  );
-};
+export const Projects = () => (
+  <Wrapper>
+    <Header />
+    <Title>Things I&apos;ve built</Title>
+    <Subheading>
+      All of these started because I ran into a problem that annoyed me enough
+      to build something to fix it.
+    </Subheading>
+    <ProjectList>
+      {projects.map((project: IProject) => (
+        <Project project={project} key={project.name} />
+      ))}
+    </ProjectList>
+  </Wrapper>
+);
+
+// -- Styled Components --
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
 `;
 
-const Title = styled.h3`
-  text-align: center;
-  font-family: "Mada", sans-serif;
-  font-size: 32px;
+const Title = styled.h1`
+  font-family: ${fonts.heading};
+  font-size: 36px;
+  font-weight: 600;
   margin: 0;
+  letter-spacing: -0.5px;
+  color: ${colors.text};
 
   @media only screen and (max-width: 600px) {
     font-size: 28px;
   }
 `;
 
-const Back = styled.a`
-  color: black;
-  font-size: 18px;
-  margin-bottom: 16px;
+const Subheading = styled.p`
+  font-size: 17px;
+  line-height: 1.7;
+  color: ${colors.textMuted};
+  margin: 12px 0 0;
 `;
 
-const Subheading = styled.p`
-  text-align: center;
-  font-size: 18px;
-  max-width: 600px;
-  margin: 16px 0 32px 0;
-  color: #555;
+const ProjectList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
 `;

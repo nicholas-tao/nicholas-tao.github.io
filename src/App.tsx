@@ -3,14 +3,42 @@ import "./fonts/fonts.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Projects } from "./components/Projects";
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
+import { colors, fonts } from "./theme";
 
-export const App = () => {
-  return (
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: ${colors.background};
+    color: ${colors.text};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: ${colors.text};
+    color: ${colors.background};
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const App = () => (
+  <>
+    <GlobalStyle />
     <Container>
       <BrowserRouter>
         <Routes>
@@ -20,19 +48,20 @@ export const App = () => {
       </BrowserRouter>
       <Footer />
     </Container>
-  );
-};
+  </>
+);
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 48px 48px 16px;
-  font-family: "Mada", sans-serif;
+  padding: 80px 40px 40px;
+  font-family: ${fonts.body};
+  min-height: 100vh;
+  animation: ${fadeIn} 0.6s ease-out;
 
   @media only screen and (max-width: 600px) {
-    padding: 32px 32px 8px;
+    padding: 48px 24px 24px;
   }
 `;

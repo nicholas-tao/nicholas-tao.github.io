@@ -2,19 +2,19 @@ import { IItem } from "../types";
 
 export const hobbies: IItem[] = [
   {
-    description: "Playing badminton",
+    description: "playing badminton",
     emoji: "🏸",
   },
   {
-    description: "Trying new recipes",
+    description: "trying new recipes",
     emoji: "👨‍🍳",
   },
   {
-    description: "Dilly dallying around NYC",
+    description: "dilly dallying around NYC",
     emoji: "🗽",
   },
   {
-    description: "Making YouTube videos",
+    description: "making YouTube videos",
     emoji: "▶️",
   },
 ];
