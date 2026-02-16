@@ -35,8 +35,10 @@ export const Project = (props: IProps) => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    align-items: stretch;
   }
   padding: 1px;
   border: 1px solid #3b403e;
@@ -50,17 +52,21 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   border-radius: 3% 0 0 3%;
+  object-fit: cover;
+  object-position: center;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
+    height: 200px;
     border-radius: 5% 5% 0 0;
   }
   @media only screen and (min-width: 600px) {
     width: 300px;
-    height: (300 / 1.8) px;
+    height: 167px;
   }
   @media only screen and (min-width: 1024px) {
     width: 400px;
+    height: 222px;
   }
 `;
 

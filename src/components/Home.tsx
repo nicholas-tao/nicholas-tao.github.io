@@ -28,17 +28,13 @@ export const Home = () => {
         <Headshot src={headshot} alt="NT" height="225px" width="225px" />
       </Header>
       <Body>
-        I'm a final year Computer Science student at the University of Waterloo.
-        This summer, I interned on the Console team at{" "}
-        <Link href="https://www.cockroachlabs.com/">Cockroach Labs</Link> (the
-        creators of CockroachDB) in New York City!
-        <List description="Previously, I" items={internships} />
-        I'm currently seeking <b>2025 new grad</b> opportunities!
+        I'm a Software Engineer based in New York City, currently working on some exciting projects I can't talk about yet. I recently graduated from the University of Waterloo with a degree in Computer Science, where I completed six internships at fast-growing tech companies, building everything from developer tools to crypto payment systems.
+        <List description="During my internships, I" items={internships} />
         <PastProjects />
         <List description="In my free time, you can find me" items={hobbies} />
         <Youtube />
-        Always happy to meet new people and hear about exciting opportunities!{" "}
-        <Link href="https://www.linkedin.com/in/nicholastao">Let's chat.</Link>
+        I'm always open to connecting with fellow engineers, discussing interesting projects, and exploring new opportunities.{" "}
+        <Link href="https://www.linkedin.com/in/nicholastao">Let's connect!</Link>
       </Body>
     </Wrapper>
   );
@@ -47,13 +43,14 @@ export const Home = () => {
 const PastProjects = () => {
   return (
     <SectionWrapper>
-      From connecting university students through{" "}
-      <Link href="https://omegu.herokuapp.com/">Wave Chat</Link>, to making job
-      hunting easier with{" "}
+      I love building products that solve real problems. From connecting
+      university students through{" "}
+      <Link href="https://omegu.herokuapp.com/">Wave Chat</Link>,
+      to automating job applications with{" "}
       <Link href="https://devpost.com/software/applyai">ApplyAI</Link>, to
-      tracking grocery store lineups with{" "}
+      helping people avoid crowded stores with{" "}
       <Link href="https://devpost.com/software/lynz">Lynz</Link>, I'm always
-      looking to tackle interesting challenges. Read more about my work{" "}
+      looking to tackle interesting challenges. Check out some of my projects{" "}
       <Link href="/projects" bgColour="#cae8dd">
         here
       </Link>
@@ -65,13 +62,13 @@ const PastProjects = () => {
 const Youtube = () => {
   return (
     <SectionWrapper>
-      I started{" "}
+      I've been documenting my entire tech journey on{" "}
       <Link href="https://www.youtube.com/c/NicholasT/" bgColour="#cae8dd">
-        my channel
+        my YouTube channel
       </Link>{" "}
-      in May 2020 to document my university experience, but now make videos
-      about software engineering/tech and my journey as a CS student trying to
-      figure out life.
+      since 2020—from figuring out university to landing internships, to the real
+      lessons learned as I navigate the industry, now with 165k subscribers and
+      21 million views.
     </SectionWrapper>
   );
 };

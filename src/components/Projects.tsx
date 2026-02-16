@@ -9,6 +9,10 @@ export const Projects = () => {
     <Wrapper>
       <Back href="/">home</Back>
       <Title>👨‍💻Things I&apos;ve built</Title>
+      <Subheading>
+        All of these started because I ran into a problem that annoyed me enough to
+        build something to fix it.
+      </Subheading>
       {projects.map((project: IProject, i: number) => {
         return <Project project={project} key={i} />;
       })}
@@ -37,4 +41,12 @@ const Back = styled.a`
   color: black;
   font-size: 18px;
   margin-bottom: 16px;
+`;
+
+const Subheading = styled.p`
+  text-align: center;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 16px 0 32px 0;
+  color: #555;
 `;

@@ -10,8 +10,8 @@ export const hobbies: IItem[] = [
     emoji: "👨‍🍳",
   },
   {
-    description: "Running events for Waterloo's CS club",
-    emoji: "🎉",
+    description: "Dilly dallying around NYC",
+    emoji: "🗽",
   },
   {
     description: "Making YouTube videos",

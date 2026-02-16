@@ -2,22 +2,27 @@ import { IItem } from "../types";
 
 export const internships: IItem[] = [
   {
-    description: "handled crypto payments at",
+    description: "shipped audit logs and built some really useful hooks at",
+    company: "Cockroach Labs",
+    link: "https://www.cockroachlabs.com/",
+  },
+  {
+    description: "built crypto payment systems at",
     company: "ETHGlobal",
     link: "https://www.ethglobal.com/",
   },
   {
-    description: "built 1-on-1 tutoring features at",
+    description: "shipped 1-on-1 tutoring features at",
     company: "Outschool",
     link: "https://www.outschool.com/",
   },
   {
-    description: "improved data infrastructure at",
+    description: "optimized data queries and analytics at",
     company: "Kiavi",
     link: "https://www.kiavi.com/",
   },
   {
-    description: "made developer's lives better at",
+    description: "built developer tools to speed up mobile development at",
     company: "Wealthsimple",
     link: "https://www.wealthsimple.com/",
   },

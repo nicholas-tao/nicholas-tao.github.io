@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const Footer = () => {
   return (
     <Wrapper>
-      <p>Made with ❤️ by Nicholas Tao &copy; 2024</p>
-      <LastUpdated>Last updated: August 2024</LastUpdated>
+      <p>Made with ❤️ by Nicholas Tao &copy; 2026</p>
+      <LastUpdated>Last updated: February 2026</LastUpdated>
     </Wrapper>
   );
 };
